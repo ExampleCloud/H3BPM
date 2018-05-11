@@ -10,6 +10,7 @@ namespace OThinker.H3.Example
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
