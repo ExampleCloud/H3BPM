@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OThinker.H3.Example", "OThinker.H3.Example\OThinker.H3.Example.csproj", "{F6FB6E28-5471-405C-94D1-5620EF429D5D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OThiker.H3.Remoting", "OThiker.H3.Remoting", "{334AC6C1-F674-4564-B4EB-5B262AAEF504}"
 	ProjectSection(SolutionItems) = preProject
 		ReadMe.md = ReadMe.md
@@ -22,10 +20,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F6FB6E28-5471-405C-94D1-5620EF429D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6FB6E28-5471-405C-94D1-5620EF429D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6FB6E28-5471-405C-94D1-5620EF429D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6FB6E28-5471-405C-94D1-5620EF429D5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CD9BB14-17F1-48AC-AB39-125C36D1DB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CD9BB14-17F1-48AC-AB39-125C36D1DB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD9BB14-17F1-48AC-AB39-125C36D1DB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
