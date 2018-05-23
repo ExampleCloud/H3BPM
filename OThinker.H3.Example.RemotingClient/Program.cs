@@ -3,6 +3,8 @@ using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using OThinker.H3.Example.Model;
 
+using System.Xml.XPath;
+
 namespace OThinker.H3.Example.RemotingClient
 {
     class Program
@@ -56,7 +58,6 @@ namespace OThinker.H3.Example.RemotingClient
 
             Console.ReadLine();
         }
-
         private static void InvokeH3Remoting()
         {
 
