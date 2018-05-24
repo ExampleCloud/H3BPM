@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidateUserSoapIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapOut">
+    <wsdl:part name="ValidateUserResult" type="s:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticationUserSoapIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="Token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticationUserSoapOut">
+    <wsdl:part name="GetAuthenticationUserResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSecretSoapIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="NewSecret" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSecretSoapOut">
+    <wsdl:part name="UpdateSecretResult" type="s:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SSOSystemUrlSoapIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="UserCode" type="s:string" />
+    <wsdl:part name="TargetSystemCode" type="s:string" />
+    <wsdl:part name="TargetUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SSOSystemUrlSoapOut">
+    <wsdl:part name="SSOSystemUrlResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpGetIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticationUserHttpGetIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="Token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticationUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSecretHttpGetIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="NewSecret" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSecretHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SSOSystemUrlHttpGetIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="UserCode" type="s:string" />
+    <wsdl:part name="TargetSystemCode" type="s:string" />
+    <wsdl:part name="TargetUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SSOSystemUrlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpPostIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticationUserHttpPostIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="Token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticationUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSecretHttpPostIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="NewSecret" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSecretHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SSOSystemUrlHttpPostIn">
+    <wsdl:part name="SystemCode" type="s:string" />
+    <wsdl:part name="Secret" type="s:string" />
+    <wsdl:part name="UserCode" type="s:string" />
+    <wsdl:part name="TargetSystemCode" type="s:string" />
+    <wsdl:part name="TargetUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SSOSystemUrlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SSOServiceSoap">
+    <wsdl:operation name="ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录验证，采用统一平台用户帐号和密码进行验证</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUserSoapIn" />
+      <wsdl:output message="tns:ValidateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据 Token 解密得到真实的用户信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAuthenticationUserSoapIn" />
+      <wsdl:output message="tns:GetAuthenticationUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecret">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更改解密秘钥</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSecretSoapIn" />
+      <wsdl:output message="tns:UpdateSecretSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSOSystemUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取可以单点登录到其他系统的URL</wsdl:documentation>
+      <wsdl:input message="tns:SSOSystemUrlSoapIn" />
+      <wsdl:output message="tns:SSOSystemUrlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SSOServiceHttpGet">
+    <wsdl:operation name="ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录验证，采用统一平台用户帐号和密码进行验证</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUserHttpGetIn" />
+      <wsdl:output message="tns:ValidateUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据 Token 解密得到真实的用户信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAuthenticationUserHttpGetIn" />
+      <wsdl:output message="tns:GetAuthenticationUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecret">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更改解密秘钥</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSecretHttpGetIn" />
+      <wsdl:output message="tns:UpdateSecretHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSOSystemUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取可以单点登录到其他系统的URL</wsdl:documentation>
+      <wsdl:input message="tns:SSOSystemUrlHttpGetIn" />
+      <wsdl:output message="tns:SSOSystemUrlHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SSOServiceHttpPost">
+    <wsdl:operation name="ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录验证，采用统一平台用户帐号和密码进行验证</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUserHttpPostIn" />
+      <wsdl:output message="tns:ValidateUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据 Token 解密得到真实的用户信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAuthenticationUserHttpPostIn" />
+      <wsdl:output message="tns:GetAuthenticationUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecret">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更改解密秘钥</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSecretHttpPostIn" />
+      <wsdl:output message="tns:UpdateSecretHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSOSystemUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取可以单点登录到其他系统的URL</wsdl:documentation>
+      <wsdl:input message="tns:SSOSystemUrlHttpPostIn" />
+      <wsdl:output message="tns:SSOSystemUrlHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SSOServiceSoap" type="tns:SSOServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://tempuri.org/ValidateUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationUser">
+      <soap:operation soapAction="http://tempuri.org/GetAuthenticationUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecret">
+      <soap:operation soapAction="http://tempuri.org/UpdateSecret" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSOSystemUrl">
+      <soap:operation soapAction="http://tempuri.org/SSOSystem" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SSOServiceSoap12" type="tns:SSOServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidateUser">
+      <soap12:operation soapAction="http://tempuri.org/ValidateUser" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationUser">
+      <soap12:operation soapAction="http://tempuri.org/GetAuthenticationUser" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecret">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSecret" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSOSystemUrl">
+      <soap12:operation soapAction="http://tempuri.org/SSOSystem" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SSOServiceHttpGet" type="tns:SSOServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ValidateUser">
+      <http:operation location="/ValidateUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationUser">
+      <http:operation location="/GetAuthenticationUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecret">
+      <http:operation location="/UpdateSecret" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSOSystemUrl">
+      <http:operation location="/SSOSystemUrl" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SSOServiceHttpPost" type="tns:SSOServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ValidateUser">
+      <http:operation location="/ValidateUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationUser">
+      <http:operation location="/GetAuthenticationUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSecret">
+      <http:operation location="/UpdateSecret" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSOSystemUrl">
+      <http:operation location="/SSOSystemUrl" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SSOService">
+    <wsdl:port name="SSOServiceSoap" binding="tns:SSOServiceSoap">
+      <soap:address location="http://121.40.136.138:8010/Portal/WebServices/SSOService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SSOServiceSoap12" binding="tns:SSOServiceSoap12">
+      <soap12:address location="http://121.40.136.138:8010/Portal/WebServices/SSOService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SSOServiceHttpGet" binding="tns:SSOServiceHttpGet">
+      <http:address location="http://121.40.136.138:8010/Portal/WebServices/SSOService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SSOServiceHttpPost" binding="tns:SSOServiceHttpPost">
+      <http:address location="http://121.40.136.138:8010/Portal/WebServices/SSOService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
