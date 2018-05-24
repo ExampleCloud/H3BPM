@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OThinker.H3.Example.Model
+namespace OThinker.H3.Example.RemotingModel
 {
     public class TalkerServer : MarshalByRefObject, ITalker
     {

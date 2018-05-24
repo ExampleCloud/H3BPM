@@ -22,5 +22,5 @@ H3BPM 采用的方式
 H3BPM 的执行方式。
 本质上是获取了一个Vessel对象，再通过Vessel对象的 InvokerMethod_O() 方法来执行实际模块的方法
 
-### OThinker.H3.Example.Model
+### OThinker.H3.Example.RemotingModel
 定义远程对象模型类，以及接口类。

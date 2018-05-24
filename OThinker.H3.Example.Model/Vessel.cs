@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OThinker.H3.Example.Model
+namespace OThinker.H3.Example.RemotingModel
 {
     public class Vessel : MarshalByRefObject, IVessel
     {
@@ -19,7 +19,7 @@ namespace OThinker.H3.Example.Model
                 实际上H3BPM里关于这部分的实现更加复杂。
              */
 
-            Type t = Type.GetType("OThinker.H3.Example.Model." + moduleName);
+            Type t = Type.GetType("OThinker.H3.Example.RemotingModel." + moduleName);
             object obj = System.Activator.CreateInstance(t);
             System.Reflection.MethodInfo method = t.GetMethod(methodName);//获得方法
             return method.Invoke(obj, parameters);//调用方法

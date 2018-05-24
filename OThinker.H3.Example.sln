@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OThinker.H3.Example.Remotin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OThinker.H3.Example.RemotingClient", "OThinker.H3.Example.RemotingClient\OThinker.H3.Example.RemotingClient.csproj", "{325CA09D-4F5C-4E25-9ED2-0B6D6F050803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OThinker.H3.Example.Model", "OThinker.H3.Example.Model\OThinker.H3.Example.Model.csproj", "{D477BA4A-F6EE-49BA-9E73-6047A62C0F59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OThinker.H3.Example.RemotingModel", "OThinker.H3.Example.Model\OThinker.H3.Example.RemotingModel.csproj", "{D477BA4A-F6EE-49BA-9E73-6047A62C0F59}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OThinker.H3.SSO", "OThinker.H3.SSO", "{8C5926C9-9B1A-4ADA-BD9E-71D3F71A911C}"
 EndProject

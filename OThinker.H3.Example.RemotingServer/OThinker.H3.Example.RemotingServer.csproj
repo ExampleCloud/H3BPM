@@ -51,9 +51,9 @@
     <None Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OThinker.H3.Example.Model\OThinker.H3.Example.Model.csproj">
+    <ProjectReference Include="..\OThinker.H3.Example.Model\OThinker.H3.Example.RemotingModel.csproj">
       <Project>{d477ba4a-f6ee-49ba-9e73-6047a62c0f59}</Project>
-      <Name>OThinker.H3.Example.Model</Name>
+      <Name>OThinker.H3.Example.RemotingModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

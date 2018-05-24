@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
-using OThinker.H3.Example.Model;
+using OThinker.H3.Example.RemotingModel;
 
 using System.Xml.XPath;
 
