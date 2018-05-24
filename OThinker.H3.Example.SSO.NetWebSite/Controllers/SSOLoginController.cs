@@ -16,16 +16,19 @@ namespace OThinker.H3.Example.SSO.NetWebSite.Controllers
     {
         /// <summary>
         /// 验证服务器的Session_Name
+        /// 用于验证中心判断用户是否已经登陆过
         /// </summary>
         private const string User_Seesion = "H3USER_SESSION";
 
         /// <summary>
         /// 验证服务器的编码
+        /// 此处的验证服务器可以理解为H3BPM
         /// </summary>
         private const string SystemCode = "H3";
 
         /// <summary>
         /// 验证服务器的密钥
+        /// 此处的验证服务器可以理解为H3BPM
         /// </summary>
         private const string Secret = "h3bpm";
 
@@ -33,6 +36,8 @@ namespace OThinker.H3.Example.SSO.NetWebSite.Controllers
         private H3SSOService.SSOServiceSoapClient _client = null;
         /// <summary>
         /// SSOService 客户端
+        /// H3BPM 提供的SSOService。
+        /// 此处使用的测试环境：http://121.40.136.138:8010/Portal/WebServices/SSOService.asmx
         /// </summary>
         private H3SSOService.SSOServiceSoapClient client
         {
@@ -48,7 +53,7 @@ namespace OThinker.H3.Example.SSO.NetWebSite.Controllers
 
         public ActionResult Index(SSOUser user)
         {
-            //访问验证中心，如果已经验证过，则直接跳转到请求验证的系统地址。
+            //访问验证中心地址，如果已经验证过，则直接跳转到请求验证的系统地址。
             string redirectUrl = GetSystemUrl(user.TargetSystemCode, user.RedirectUrl);
             if (string.IsNullOrEmpty(redirectUrl))
             {

@@ -12,14 +12,16 @@ namespace OThinker.H3.Example.SSO.NetWebSite.Controllers
     public class LoginController : Controller
     {
         /// <summary>
-        /// 常量用户Code
+        /// 常量用户Code，用于验证用户信息。
+        /// 真实业务场景中，应该存在于实际业务库中。
         /// </summary>
         private const string UserCode = "administrator";
 
         /// <summary>
         /// 常量用户密码
+        /// 真实业务场景中，应该存在于实际业务库中。
         /// </summary>
-        private const string Password = "administrator";
+        private const string Password = "000000";
 
         /// <summary>
         /// SSODemo的单点登陆编码
