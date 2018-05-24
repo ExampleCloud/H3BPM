@@ -1,5 +1,10 @@
 ﻿![调用逻辑图](https://upload-images.jianshu.io/upload_images/855297-3aa9a94be43696da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+
+使用说明：
+克隆到本地
+访问
+http://Url:Port/SSOLogin/Index?RedictUrl=Url:Port/Login/SSOLogin&TargetSystemCode=SSODemo
 ###统一验证服务器  H3BPM
 调用逻辑图中的认证中心
 
