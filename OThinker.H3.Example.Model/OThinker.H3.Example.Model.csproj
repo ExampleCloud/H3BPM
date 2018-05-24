@@ -49,5 +49,8 @@
     <Compile Include="TalkerServer.cs" />
     <Compile Include="Vessel.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

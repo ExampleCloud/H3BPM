@@ -52,6 +52,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OThinker.H3.Example.Model\OThinker.H3.Example.Model.csproj">
